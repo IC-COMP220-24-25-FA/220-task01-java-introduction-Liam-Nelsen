@@ -28,4 +28,21 @@ public class RectangleTest {
         myRectangle = new Rectangle(0.1, 0.1);
         assertEquals(0.01, myRectangle.calcArea(), 0.0000000001);
     }
+
+    @Test
+    public void doubleSizeTest(){
+        Rectangle myRectangle = new Rectangle(5.5, 5.5);
+        double lengthExpected = 11;
+        double widthExpected = 11;
+        
+        myRectangle.doubleSize();
+
+        assertEquals(lengthExpected, myRectangle.length);
+        assertEquals(widthExpected, myRectangle.width);
+    }
+
+    @Test
+    public void TestConstructorError(){
+        assertThrows(RuntimeException.class, () -> new Rectangle(0, 0));
+    }
 }
