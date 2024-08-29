@@ -22,23 +22,30 @@ public class RectangleTest {
         //3rd parameter says how far off it can be since it is a double
         assertEquals(1, myRectangle.calcArea(), 0.0001);
         
-        myRectangle = new Rectangle(5.5, 5.5);
-        assertEquals(30.25, myRectangle.calcArea(), 0.0001);
+        myRectangle = new Rectangle(4, 8);
+        assertEquals(32, myRectangle.calcArea(), 0.0001);
 
-        myRectangle = new Rectangle(0.1, 0.1);
-        assertEquals(0.01, myRectangle.calcArea(), 0.0000000001);
+        myRectangle = new Rectangle(2, 3);
+        assertEquals(6, myRectangle.calcArea(), 0.0000000001);
     }
 
     @Test
     public void doubleSizeTest(){
-        Rectangle myRectangle = new Rectangle(5.5, 5.5);
-        double lengthExpected = 11;
-        double widthExpected = 11;
+        Rectangle myRectangle = new Rectangle(4, 6);
+        double lengthExpected = 8;
+        double widthExpected = 12;
         
         myRectangle.doubleSize();
 
         assertEquals(lengthExpected, myRectangle.length);
         assertEquals(widthExpected, myRectangle.width);
+    }
+
+    @Test
+    public void longestLineWithinTest(){
+        Rectangle myRectangle = new Rectangle(4, 8);
+
+        assertEquals(8, myRectangle.longestLineWithin());
     }
 
     @Test
