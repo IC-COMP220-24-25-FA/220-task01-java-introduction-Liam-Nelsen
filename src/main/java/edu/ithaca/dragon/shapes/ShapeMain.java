@@ -1,7 +1,7 @@
 package edu.ithaca.dragon.shapes;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Scanner;
 
 public class ShapeMain {
     
@@ -29,5 +29,14 @@ public class ShapeMain {
         }
         //Allow the user to choose one, double the size of that one, and print them all again
         //Use a loop to repeat the process 5 times
+
+        Scanner myScanner = new Scanner(System.in);
+        System.out.println("Enter a rectangle number to double the size of (Enter 0-4): ");
+
+        String rectInput = myScanner.nextLine();
+        System.out.println("Doubling rectangle " + rectInput + "..." + "\n");
+        System.out.println("Here is the updated list of all rectangles:");
+
+
     }
 }
