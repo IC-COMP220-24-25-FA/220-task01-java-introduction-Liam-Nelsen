@@ -16,4 +16,16 @@ public class TriangleTest {
         myTriangle = new Triangle(2, 3);
         assertEquals(6, myTriangle.calcArea());
     }
+
+    @Test
+    public void doubleSizeTest(){
+        Triangle myTriangle = new Triangle(4, 6);
+        double baseExpected = 8;
+        double heightExpected = 12;
+        
+        myTriangle.doubleSize();
+
+        assertEquals(baseExpected, myTriangle.base);
+        assertEquals(heightExpected, myTriangle.height);
+    }
 }
