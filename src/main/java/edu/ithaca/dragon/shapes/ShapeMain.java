@@ -7,6 +7,8 @@ public class ShapeMain {
     
     public static void main(String[] args){
         //Make a list of 5 randomly-sized rectangles and print their area and the largest line that can be drawn through them
+        //Allow the user to choose one, double the size of that one, and print them all again
+        //Use a loop to repeat the process 5 times
         
         ArrayList <Rectangle> myRectangles = new ArrayList<Rectangle>();
 
@@ -27,16 +29,25 @@ public class ShapeMain {
             System.out.println("The area of rectangle " + j + " is " + myRectangles.get(i).calcArea());
             System.out.println("The longest line withing rectangle " + j + " is " + myRectangles.get(i).longestLineWithin() + "\n");
         }
-        //Allow the user to choose one, double the size of that one, and print them all again
-        //Use a loop to repeat the process 5 times
 
-        Scanner myScanner = new Scanner(System.in);
-        System.out.println("Enter a rectangle number to double the size of (Enter 0-4): ");
+        for (int j = 0; j < 5; j++){
+            Scanner myScanner = new Scanner(System.in);
+            System.out.println("Enter a rectangle number to double the size of (Enter 1-5): ");
+            String rectInput = myScanner.nextLine();
 
-        String rectInput = myScanner.nextLine();
-        System.out.println("Doubling rectangle " + rectInput + "..." + "\n");
-        System.out.println("Here is the updated list of all rectangles:");
+            int userChoice = Integer.parseInt(rectInput);
+            System.out.println("Doubling rectangle " + rectInput + "..." + "\n");
 
+            myRectangles.get(userChoice - 1).doubleSize();
+            //System.out.println(myRectangles.get(userChoice - 1).calcArea());
+            //System.out.println(myRectangles.get(userChoice - 1).longestLineWithin());
 
+            System.out.println("Here is the updated list of all rectangles:" + "\n");
+            for (int k = 0; k < myRectangles.size(); k++){
+                int l = k+1;
+                System.out.println("The area of rectangle " + l + " is " + myRectangles.get(k).calcArea());
+                System.out.println("The longest line withing rectangle " + l + " is " + myRectangles.get(k).longestLineWithin() + "\n");
+            }
+        }
     }
 }
