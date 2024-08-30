@@ -35,6 +35,10 @@ public class TriangleTest {
         Triangle myTriangle = new Triangle(4, 8);
 
         assertEquals(8, myTriangle.longestLineWithin());
+
+        Triangle myTriangle2 = new Triangle(8, 4);
+
+        assertEquals(8, myTriangle2.longestLineWithin());
     }
 
     @Test

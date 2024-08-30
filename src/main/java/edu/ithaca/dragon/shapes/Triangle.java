@@ -21,6 +21,10 @@ public class Triangle {
     }
 
     public double longestLineWithin(){
-
+        if (base > height){
+            return base;
+        } else {
+            return height;
+        }
     }
 }
