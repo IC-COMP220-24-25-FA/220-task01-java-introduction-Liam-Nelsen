@@ -10,7 +10,9 @@ public class Triangle {
     }
 
     public double calcArea(){
-        
+        double area = base * height;
+
+        return area;
     }
 
     public void doubleSize(){
