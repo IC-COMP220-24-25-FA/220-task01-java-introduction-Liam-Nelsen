@@ -16,7 +16,8 @@ public class Triangle {
     }
 
     public void doubleSize(){
-
+        base *=2;
+        height *=2;
     }
 
     public double longestLineWithin(){
