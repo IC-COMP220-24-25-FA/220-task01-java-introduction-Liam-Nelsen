@@ -17,7 +17,7 @@ public class Triangle {
 
     }
 
-    public doule longestLineWithin(){
+    public double longestLineWithin(){
 
     }
 }

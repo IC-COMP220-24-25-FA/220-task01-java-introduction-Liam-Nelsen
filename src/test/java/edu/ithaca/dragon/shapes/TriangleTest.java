@@ -1,6 +1,7 @@
 package edu.ithaca.dragon.shapes;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -27,5 +28,17 @@ public class TriangleTest {
 
         assertEquals(baseExpected, myTriangle.base);
         assertEquals(heightExpected, myTriangle.height);
+    }
+
+    @Test
+    public void longestLineWithinTest(){
+        Triangle myTriangle = new Triangle(4, 8);
+
+        assertEquals(8, myTriangle.longestLineWithin());
+    }
+
+    @Test
+    public void TestConstructorError(){
+        assertThrows(RuntimeException.class, () -> new Rectangle(0, 0));
     }
 }
