@@ -33,4 +33,8 @@ public class Circle {
 
         return diameter;
     }
+
+    public String toString(){
+        return "This is a circle with a radius of " + radius;
+    }
 }

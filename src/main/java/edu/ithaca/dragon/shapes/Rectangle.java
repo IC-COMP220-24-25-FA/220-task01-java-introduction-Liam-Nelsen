@@ -25,5 +25,9 @@ public class Rectangle {
 
         return longestLine;
     }
+
+    public String toString(){
+        return "This is a rectangle with a length of " + length + " and a width of " + width;
+    }
     
 }
