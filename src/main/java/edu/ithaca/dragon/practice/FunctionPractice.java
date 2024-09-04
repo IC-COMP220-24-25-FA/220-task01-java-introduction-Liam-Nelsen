@@ -109,12 +109,11 @@ public class FunctionPractice {
             return "";
         }
 
-        int letterOccur = 0;
         int highestNumOccur = 0;
         String wordMostOccur = words.get(0);
 
         for (String word : words){
-
+            int letterOccur = 0;
             String currentString = word.toLowerCase();
 
             for (int i = 0; i < currentString.length(); i++){
@@ -129,10 +128,10 @@ public class FunctionPractice {
             }
 
 
-            wordMostOccur = word;
+            //wordMostOccur = word;
         }
 
-        return wordMostOccur;
+        return wordMostOccur.toLowerCase();
     }
 
 
