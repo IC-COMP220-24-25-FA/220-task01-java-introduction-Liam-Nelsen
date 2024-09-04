@@ -17,21 +17,34 @@ public class ShapeMain {
                 int randCircle = random.nextInt(10 - 1 + 1) + 1;
                 Circle circleToAdd = new Circle(randCircle);
                 list1.add(circleToAdd);
+                System.out.println(list1.get(i));
+
+                circleToAdd.doubleSize();
             } else if (randShape == 2){
                 int randRectWidth = random.nextInt(10 - 1 + 1) + 1;
                 int randRectLength = random.nextInt(10 - 1 + 1) + 1;
                 Rectangle rectToAdd = new Rectangle(randRectWidth, randRectLength);
                 list1.add(rectToAdd);
+                System.out.println(list1.get(i));
+
+                rectToAdd.doubleSize();
             } else {
                 int randTriBase = random.nextInt(10 - 1 + 1) + 1;
                 int randTriHeight = random.nextInt(10 - 1 + 1) + 1;
                 Triangle triToAdd = new Triangle(randTriBase, randTriHeight);
                 list1.add(triToAdd);
-            }
+                System.out.println(list1.get(i));
 
-            System.out.println(list1.get(i));
+                triToAdd.doubleSize();
+            }
         }
-        // System.out.println(list1.size());
+
+        System.out.println("\nList after doubling: ");
+        
+        for(Shape shape : list1){
+            System.out.println(shape);
+        }
+        System.out.println("");
 
         //Make a list of 5 randomly-sized rectangles and print their area and the largest line that can be drawn through them
         //Allow the user to choose one, double the size of that one, and print them all again
