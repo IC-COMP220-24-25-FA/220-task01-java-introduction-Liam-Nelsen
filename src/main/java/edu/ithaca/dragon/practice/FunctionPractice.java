@@ -126,9 +126,6 @@ public class FunctionPractice {
                 highestNumOccur = letterOccur;
                 wordMostOccur = word;
             }
-
-
-            //wordMostOccur = word;
         }
 
         return wordMostOccur.toLowerCase();
