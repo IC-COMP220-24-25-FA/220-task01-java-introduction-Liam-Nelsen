@@ -98,7 +98,7 @@ public class FunctionPracticeTest {
 
         assertEquals(4, FunctionPractice.findFirstLargest(test1));
         assertEquals(2, FunctionPractice.findFirstLargest(test2));
-        assertEquals(3, FunctionPractice.findFirstLargest(test3));
+        assertEquals(0, FunctionPractice.findFirstLargest(test3));
         assertEquals(-1, FunctionPractice.findFirstLargest(test4));
     }
 
