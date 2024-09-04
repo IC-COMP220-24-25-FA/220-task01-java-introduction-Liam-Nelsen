@@ -50,18 +50,18 @@ public class FunctionPracticeTest {
         test1.add(9);
 
         List<Integer> test2 = new ArrayList<Integer>();
-        test1.add(4);
-        test1.add(6);
-        test1.add(8);
-        test1.add(1);
-        test1.add(7);
+        test2.add(4);
+        test2.add(6);
+        test2.add(8);
+        test2.add(1);
+        test2.add(7);
 
         List<Integer> test3 = new ArrayList<Integer>();
-        test1.add(4);
-        test1.add(1);
-        test1.add(0);
-        test1.add(4);
-        test1.add(3);
+        test3.add(4);
+        test3.add(1);
+        test3.add(0);
+        test3.add(4);
+        test3.add(3);
 
         List<Integer> test4 = new ArrayList<Integer>();
 
@@ -81,18 +81,18 @@ public class FunctionPracticeTest {
         test1.add(9);
 
         List<Integer> test2 = new ArrayList<Integer>();
-        test1.add(4);
-        test1.add(6);
-        test1.add(8);
-        test1.add(1);
-        test1.add(7);
+        test2.add(4);
+        test2.add(6);
+        test2.add(8);
+        test2.add(1);
+        test2.add(7);
 
         List<Integer> test3 = new ArrayList<Integer>();
-        test1.add(4);
-        test1.add(1);
-        test1.add(0);
-        test1.add(4);
-        test1.add(3);
+        test3.add(4);
+        test3.add(1);
+        test3.add(0);
+        test3.add(4);
+        test3.add(3);
 
         List<Integer> test4 = new ArrayList<Integer>();
 
@@ -100,6 +100,36 @@ public class FunctionPracticeTest {
         assertEquals(2, FunctionPractice.findFirstLargest(test2));
         assertEquals(3, FunctionPractice.findFirstLargest(test3));
         assertEquals(-1, FunctionPractice.findFirstLargest(test4));
+    }
+
+    @Test
+    public void findFirstMostOccurencesOfLetterTest (){
+        List<String> test1 = new ArrayList<String>();
+
+        test1.add("Watermellon");
+        test1.add("Lolipop");
+        test1.add("Mercedes");
+        test1.add("Racecar");
+        test1.add("Zebra");
+        test1.add("Computer");
+
+
+        List<String> test2 = new ArrayList<String>();
+
+        test2.add("Watermellon");
+        test2.add("Lolipop");
+        test2.add("Mercedes");
+        test2.add("Racecar");
+        test2.add("Zebra");
+        test2.add("Computer");
+        test2.add("Mercedes");
+
+        List<String> test3 = new ArrayList<String>();
+
+
+        assertEquals("mercedes", FunctionPractice.findFirstMostOccurencesOfLetter(test1, 'e'));
+        assertEquals("mercedes", FunctionPractice.findFirstMostOccurencesOfLetter(test2, 'e'));
+        assertEquals("", FunctionPractice.findFirstMostOccurencesOfLetter(test3, 'e'));
     }
     
 }
