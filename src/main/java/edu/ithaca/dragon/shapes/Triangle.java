@@ -1,6 +1,6 @@
 package edu.ithaca.dragon.shapes;
 
-public class Triangle {
+public class Triangle implements Shape{
     double base;
     double height;
 
@@ -26,5 +26,9 @@ public class Triangle {
         } else {
             return height;
         }
+    }
+
+    public String toString(){
+        return "This is a triangle with a base of " + base + " and a height of " + height;
     }
 }
